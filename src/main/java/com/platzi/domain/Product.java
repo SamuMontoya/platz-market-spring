@@ -35,7 +35,4 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Category category;
-
-    @OneToMany(mappedBy = "product")
-    private List<PurchasesProduct> products;
 }

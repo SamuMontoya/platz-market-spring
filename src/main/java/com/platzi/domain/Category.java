@@ -21,6 +21,6 @@ public class Category {
     @Column(name = "estado")
     private Boolean isActive;
 
-    @OneToMany(mappedBy = "category")
-    private List<Product> products;
+    // @OneToMany(mappedBy = "category")
+    // private List<Product> products;
 }
