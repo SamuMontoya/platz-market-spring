@@ -3,7 +3,9 @@ package com.platzi.persistency.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -31,4 +33,6 @@ public class Client {
     @Column(name = "correo_electronico")
     private String email;
 
+    @OneToMany(mappedBy = "client")
+    private List<Purchase> purchases;
 }
